@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<style>
+      button.btn-df {
+        padding: 6px 12px;
+        background-color: #fff;
+        border-radius: 6px;
+        text-align: center;
+        background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+        background-repeat: repeat-x;
+        border-color: #245580;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+        border: 1px solid transparent;
+        color: #fff;
+        outline: none;
+      }
+		</style>
+  </head>
+  <body>
+    <% include ../base/header %> 
+    <% include ../base/nav %> 
+    <section class="main">
+      <h1>Button</h1>
+      <h3>- Type 1</h3>
+      <button type="button" class="btn-df">DEFAULT</button>
+      <button type="button" class="btn-df">SECONDARY</button>
+      <button type="button" class="btn-df">DISABLED</button>
+    </section>
+    <% include ../base/footer %> 
+  </body>
+</html>
