@@ -5,18 +5,38 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 		<style>
       button.btn-df {
-        padding: 6px 12px;
-        background-color: #fff;
-        border-radius: 6px;
-        text-align: center;
-        background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
-        background-repeat: repeat-x;
-        border-color: #245580;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
-        border: 1px solid transparent;
-        color: #fff;
-        outline: none;
+				padding: 6px 12px;
+				background-color: #fff;
+				border-radius: 6px;
+				text-align: center;
+				background-repeat: repeat-x;
+				box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+				border: 1px solid transparent;
+				color: #fff;
+				outline: none;
+				text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+				vertical-align: middle;
+				cursor: pointer;
+				text-align: center;
+				line-height: 1.3;
+				font-size: 14px;
+
+				border-color: #245580;
+				background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
       }
+			button.btn-df:hover {
+        color: #fff;
+        background-color: #265a88;
+        border-color: #122b40;
+        text-decoration: none;
+        background-position: 0 -15px;
+			}
+
+			button.btn-df:active {
+        background-color: #265a88;
+        border-color: #245580;
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+			}
 		</style>
   </head>
   <body>
@@ -25,9 +45,9 @@
     <section class="main">
       <h1>Button</h1>
       <h3>- Type 1</h3>
-      <button type="button" class="btn-df">DEFAULT</button>
-      <button type="button" class="btn-df">SECONDARY</button>
-      <button type="button" class="btn-df">DISABLED</button>
+      <button type="button" class="btn-df">Default</button>
+      <button type="button" class="btn-df">Secondary</button>
+      <button type="button" class="btn-df">Disabled</button>
     </section>
     <% include ../base/footer %> 
   </body>
