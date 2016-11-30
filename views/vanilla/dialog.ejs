@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<style>
+
+      /************************************************************************
+       * TYPE2 STYLE                                                          *
+       ************************************************************************/
+      button.btn2 { display: inline-block; padding: 7px 12px; font-size: 14px; border: 0; background-color: #fff; outline: none; color: #000; box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; border-radius: 2px; }
+
+      button.btn2:hover { border-radius: 2px; background-color: rgba(0,0,0,0.07); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; }
+      button.btn2:active { box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; }
+
+      button.btn2.btn2-primary { color: #fff; background-color: rgb(0, 188, 212); }
+      button.btn2.btn2-primary:hover { background-color: rgba(0, 188, 212, 0.4); }
+
+      /************************************************************************
+       * DIALGO STYLE                                                         *
+       ************************************************************************/
+      .dialog {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border: 1px solid green;
+        background-color: rgba(0,0,0,0.5);
+        opacity: 0;
+        display: none;
+      }
+
+
+      .dialog .box {
+        opacity: 0;
+        border: 1px solid green;
+        border-radius: 2px;
+        margin: auto;
+        width: 50%;
+        height: 250px;
+        margin-top: 0;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
+      }
+      .dialog.show {
+        display: block;
+      }
+
+      .dialog.active {
+        opacity: 1;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      }
+      .dialog.active .box {
+        opacity: 1;
+        margin-top: 13%;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+      }
+
+		</style>
+  </head>
+  <body>
+    <% include ../base/header %> 
+    <% include ../base/nav %> 
+    <section class="main">
+      <h1>Dialog</h1>
+      <h3>- Primary Type</h3>
+      <div>
+        <button id="dbutton" type="button" class="btn2 btn2-primary">Dialog</button>
+      </div>
+      <div id="dialog" class="dialog">
+        <div class="box">
+        </div>
+      </div>
+    </section>
+    <% include ../base/footer %> 
+    <script>
+      document.getElementById("dbutton").addEventListener('click', function(evt) {
+
+        //alert('구현중입니다.');
+        var jj = document.getElementById("dialog");
+        var className = jj.className;
+
+        if (!className.match(/show/)) {
+          jj.className += " show";
+        }
+
+        if (!className.match(/active/)) {
+          setTimeout(function() {
+            jj.className += " active";
+          },0);
+        }
+        return false;
+      });
+
+      document.querySelector(".dialog .box").addEventListener('click', function(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+      });
+
+      document.querySelector(".dialog").addEventListener('click', function() {
+
+        var jj = document.getElementById("dialog");
+        var className = jj.className;
+
+        if (className.match(/show/)) {
+          className.replace(/ show/,'')
+
+        }
+
+        if (className.match(/active/)) {
+          setTimeout(function() {
+            jj.className += " active";
+          },0);
+        }
+      });
+    </script>
+  </body>
+</html>
