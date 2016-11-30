@@ -4,6 +4,58 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 		<style>
+
+      .selectable select {
+         background: transparent;
+         width: 268px;
+         padding: 5px;
+         font-size: 16px;
+         line-height: 1;
+         border: 0;
+         border-radius: 0;
+         height: 34px;
+         border-bottom: 1px solid #ccc;
+         outline: none;
+         appearance: none;
+         appearance: none;
+         -moz-appearance: none;
+         -webkit-appearance: none;
+      }
+
+      .selectable {
+        position: relative;
+        display: inline-block;
+      }
+
+      .selectable label {
+        display: block;
+        position: absolute;
+        color: #ccc;
+        font-size: 12px;
+        top: -10px;
+        left: 4px;
+      }
+
+      .selectable:after {
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 0;
+        border: 1px solid rgb(244,244,244);
+        right: 9px;
+        border-width: 5px 5px 0px 5px;
+        border-color: #ccc transparent transparent transparent;
+        bottom: 15px;
+      }
+
+      .selectable select::-ms-expand {
+        display: none;
+      }
+
+      .selectable select:disabled {
+        border-bottom: 2px dotted #ccc;
+      }
+
 		</style>
   </head>
   <body>
@@ -12,8 +64,18 @@
     <section class="main">
       <h1>Selectbox</h1>
       <h3>- Primary Type</h3>
-      <div>
+      <div class="selectable">
+        <label>Frequency</label>
         <select id="select1" name="select1">
+          <option name="option1">option1</option>
+          <option name="option2">option2</option>
+          <option name="option3">option3</option>
+        </select>
+      </div>
+      <h3>- Primary Type(Diabled)</h3>
+      <div class="selectable">
+        <label>Frequency</label>
+        <select id="select1" name="select1" disabled>
           <option name="option1">option1</option>
           <option name="option2">option2</option>
           <option name="option3">option3</option>
@@ -21,5 +83,11 @@
       </div>
     </section>
     <% include ../base/footer %> 
+    <script>
+      document.getElementById("select1").addEventListener('click',function(evt) {
+          evt.preventDefault();
+          evt.stopPropagation();
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<style>
+
+      .checkboxUi {
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 49px;
+      }
+
+      .checkboxUi input[type=checkbox] {
+        opacity: 0;
+      }
+
+
+      .checkboxUi label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+      }
+
+      .checkboxUi .checkWrap {
+
+        width: 28px;
+        height: 28px;
+        /* border: 0px solid red; */
+        margin-right: 7px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        margin-top: 4px;
+        margin-right: 12px;
+      }
+
+      .checkboxUi .checkWrap .check {
+        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        float: left;
+        position: relative;
+        display: block;
+        flex-shrink: 0;
+        width: 36px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding: 4px 0px 6px 2px;
+      }
+
+      .checkboxUi .checkWrap .check > div:first-child {
+        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        width: 100%;
+        height: 14px;
+        border-radius: 30px;
+        background-color: #ccc;
+      }
+
+      .checkboxUi .checkWrap .check > div:last-child {
+
+        color: rgba(0, 0, 0, 0.870588);
+        background-color: rgb(245, 245, 245);
+        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 24px;
+        margin-left: -20px;
+      }
+
+
+      /**
+       * TYPE PRIMARY
+       */
+      .checkboxUi.primary input:checked ~ label .checkWrap .check > div:first-child {
+        background-color: rgba(0, 188, 212, 0.498039);
+      }
+
+      .checkboxUi.primary input:checked ~ label .checkWrap .check > div:last-child {
+        background-color: rgb(0, 188, 212);
+        left: 100%;
+      }
+
+      /**
+       * TYPE SECONDARY
+       */
+      .checkboxUi.secondary input:checked ~ label .checkWrap .check > div:first-child {
+        background-color: rgb(255, 157, 157);
+      }
+      .checkboxUi.secondary input:checked ~ label .checkWrap .check > div:last-child {
+        background-color: rgb(255, 204, 204);
+        left: 100%;
+      }
+
+		</style>
+  </head>
+  <body>
+    <% include ../base/header %> 
+    <% include ../base/nav %> 
+    <section class="main">
+      <h1>Toggle</h1>
+      <h3>- Primary Type</h3>
+      <div>
+        <div class="checkboxUi primary">
+          <input type="checkbox" id="monkey1" name="monkey1" checked="checked"  />
+          <label for="monkey1">
+            <div class="checkWrap">
+              <div class="check">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            monkeyToggle1
+          </label>
+        </div>
+        <br>
+        <div class="checkboxUi secondary">
+          <input type="checkbox" id="monkey2" name="monkey2" checked="checked"  />
+          <label for="monkey2">
+            <div class="checkWrap">
+              <div class="check">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            monkeyToggle2
+          </label>
+        </div>
+      </div>
+    </section>
+    <% include ../base/footer %> 
+  </body>
+</html>
