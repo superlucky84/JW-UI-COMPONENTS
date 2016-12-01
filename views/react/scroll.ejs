@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<style>
+
+      .jwscroll-wrap {
+        box-sizing: border-box;
+        width: 70%;
+        border: 1px solid green;
+      }
+      .jwscroll {
+        border: 1px solid red;
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+		</style>
+  </head>
+  <body>
+    <% include ../base/header %> 
+    <% include ../base/nav %> 
+    <section class="main">
+      <h1>Scroll</h1>
+      <h3>- Type A</h3>
+      <div class="jwscroll-wrap">
+        <div class="jwscroll">
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+        </div>
+      </div>
+    </section>
+    <% include ../base/footer %> 
+    <script>
+      var jwscrollWrap = document.querySelector(".jwscroll-wrap");
+      var jwscroll = document.querySelector(".jwscroll");
+      var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
+      console.log(scrollWeight, jwscrollWrap.offsetWidth);
+
+      var changeWidth = jwscrollWrap.offsetWidth - scrollWeight;
+
+      jwscroll.style.width = jwscroll.clientWidth+"px";
+      jwscrollWrap.style.width = changeWidth+"px";
+
+      //jwscrollWrap.style.width= '100px';
+
+    </script>
+  </body>
+</html>
