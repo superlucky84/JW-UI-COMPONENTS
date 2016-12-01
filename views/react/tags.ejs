@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+		<style>
+
+    .tag-p {
+      border: 1px solid rgba(157, 98, 98, 0.56);
+      background-color: rgba(157, 98, 98, 0.56);
+      border-radius: 4px;
+      padding: 2px 5px 2px 5px;
+      margin-right: 2px;
+      font-size: 11px;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+    .tag-a {
+
+      position: relative;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+      border: 1px solid rgba(157, 98, 98, 0.56);
+      background-color: #dea84e;
+      border-radius: 4px;
+      padding: 2px 5px 2px 14px;
+      margin-right: 2px;
+      font-size: 11px;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+    .tag-a:before {
+
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+      position: absolute;
+      left: 5px;
+      top: 7px;
+      border-radius: 100%;
+    }
+      
+		</style>
+  </head>
+  <body>
+    <% include ../base/header %> 
+    <% include ../base/nav %> 
+    <section class="main">
+      <h1>Tags</h1>
+
+      <h3>- Type P</h3>
+      <div style="line-height: 1.4em;">
+        <span class="tag-p">PROJECT</span>
+        <span class="tag-p">VRBOOK</span>
+        <span class="tag-p">COMPANY</span>
+        <span class="tag-p">REACT</span>
+        <span class="tag-p">POSTGRES</span>
+        <span class="tag-p">PHP</span>
+        <span class="tag-p">JAVASCRIPT</span>
+      </div>
+
+      <h3>- Type A</h3>
+      <div style="line-height: 1.4em;">
+        <span class="tag-a">PROJECT</span>
+        <span class="tag-a">VRBOOK</span>
+        <span class="tag-a">COMPANY</span>
+        <span class="tag-a">REACT</span>
+        <span class="tag-a">POSTGRES</span>
+        <span class="tag-a">PHP</span>
+        <span class="tag-a">JAVASCRIPT</span>
+      </div>
+    </section>
+    <% include ../base/footer %> 
+  </body>
+</html>
