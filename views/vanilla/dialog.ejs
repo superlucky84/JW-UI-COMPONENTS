@@ -27,26 +27,33 @@
         bottom: 0;
         border: 1px solid green;
         background-color: rgba(0,0,0,0.5);
-        opacity: 0;
-        display: none;
       }
 
 
       .dialog .box {
-        opacity: 0;
         border: 1px solid green;
         border-radius: 2px;
         margin: auto;
         width: 50%;
         height: 250px;
-        margin-top: 0;
         background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
       }
       .dialog.show {
         display: block;
       }
+      .dialog.hide {
+        display: none;
+      }
 
+      .dialog.deactive {
+        opacity: 0;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      }
+      .dialog.deactive .box {
+        opacity: 0;
+        margin-top: 0;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      }
       .dialog.active {
         opacity: 1;
         transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
@@ -55,7 +62,6 @@
         opacity: 1;
         margin-top: 13%;
         transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-
       }
 
 		</style>
@@ -69,52 +75,72 @@
       <div>
         <button id="dbutton" type="button" class="btn2 btn2-primary">Dialog</button>
       </div>
-      <div id="dialog" class="dialog">
+      <div id="dialog" class="dialog hide deactive">
         <div class="box">
         </div>
       </div>
     </section>
     <% include ../base/footer %> 
     <script>
-      document.getElementById("dbutton").addEventListener('click', function(evt) {
 
-        //alert('구현중입니다.');
-        var jj = document.getElementById("dialog");
-        var className = jj.className;
+      function Dialog(button, dialog) {
+        this.init(button, dialog);
+      }
 
-        if (!className.match(/show/)) {
-          jj.className += " show";
+      Dialog.prototype = {
+        init: function(button, dialog) {
+          var box = dialog.querySelector(".box");
+
+          button.addEventListener('click', function(evt) {
+            var className = dialog.className;
+            removeClass(dialog,'hide');
+            addClass(dialog,'show');
+            setTimeout(function() {
+              removeClass(dialog,'deactive');
+              addClass(dialog,'active');
+            },0);
+          });
+
+          box.addEventListener('click', function(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+          });
+
+          box.addEventListener('transitionend', function() {
+            if (!dialog.className.match(/ active/)) {
+              removeClass(dialog, 'show');
+              addClass(dialog, 'hide');
+            }
+          });
+
+          dialog.addEventListener('click', function() {
+            var className = dialog.className;
+            removeClass(dialog, 'active');
+            addClass(dialog,'deactive');
+          });
+        },
+      }
+      var dialog = new Dialog(
+          document.getElementById("dbutton"),
+          document.getElementById("dialog")
+      );
+
+      function addClass(target, addClass) {
+        var className = target.className;
+        if (!new RegExp(addClass, 'g').exec(className)) {
+          className += " "+addClass;
+          target.className = className;
         }
-
-        if (!className.match(/active/)) {
-          setTimeout(function() {
-            jj.className += " active";
-          },0);
+      }
+      function removeClass(target, removeClass) {
+        var className = target.className;
+        if (new RegExp(removeClass, 'g').exec(className)) {
+          var regex = new RegExp(' '+removeClass, 'g');
+          className = className.replace(regex, '');
+          target.className = className;
         }
-        return false;
-      });
+      }
 
-      document.querySelector(".dialog .box").addEventListener('click', function(evt) {
-        evt.stopPropagation();
-        evt.preventDefault();
-      });
-
-      document.querySelector(".dialog").addEventListener('click', function() {
-
-        var jj = document.getElementById("dialog");
-        var className = jj.className;
-
-        if (className.match(/show/)) {
-          className.replace(/ show/,'')
-
-        }
-
-        if (className.match(/active/)) {
-          setTimeout(function() {
-            jj.className += " active";
-          },0);
-        }
-      });
     </script>
   </body>
 </html>
