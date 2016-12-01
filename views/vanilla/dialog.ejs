@@ -29,23 +29,33 @@
         background-color: rgba(0,0,0,0.5);
       }
 
-
       .dialog .box {
+        position: relative;
         border: 1px solid green;
         border-radius: 2px;
         margin: auto;
-        width: 50%;
+        width: 527px;
         height: 250px;
         background-color: #fff;
+        padding: 24px;
       }
-      .dialog.show {
-        display: block;
+
+      .dialog .box .contents {
+        margin-top: 21px;
+        color: rgba(0, 0, 0, 0.6);
       }
-      .dialog.hide {
-        display: none;
+
+      .dialog .box .buttons {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        padding: 19px;
       }
 
       .dialog.deactive {
+        z-index: -1;
         opacity: 0;
         transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
@@ -55,6 +65,7 @@
         transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
       .dialog.active {
+        z-index: 99;
         opacity: 1;
         transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
@@ -75,30 +86,53 @@
       <div>
         <button id="dbutton" type="button" class="btn2 btn2-primary">Dialog</button>
       </div>
-      <div id="dialog" class="dialog hide deactive">
+      <div id="dialog" class="dialog deactive">
         <div class="box">
+          <h2>Dialog title</h2>
+          <div class="contents">
+            The actions in this window were passed in as an array of React objects.
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn2 dialog-close">Cancel</button>
+            <button type="button" class="btn2 btn2-primary">Submit</button>
+          </div>
         </div>
       </div>
     </section>
     <% include ../base/footer %> 
     <script>
 
+      var util = { 
+        addClass: function (target, addClass) {
+          var className = target.className;
+          if (!new RegExp(addClass, 'g').exec(className)) {
+            className += " "+addClass;
+            target.className = className;
+          }
+        },
+        removeClass: function (target, removeClass) {
+          var className = target.className;
+          if (new RegExp(removeClass, 'g').exec(className)) {
+            var regex = new RegExp(' '+removeClass, 'g');
+            className = className.replace(regex, '');
+            target.className = className;
+          }
+        }
+      }
+
       function Dialog(button, dialog) {
-        this.init(button, dialog);
+        this.dialog = dialog;
+        this.button = button;
+        this.init();
       }
 
       Dialog.prototype = {
-        init: function(button, dialog) {
-          var box = dialog.querySelector(".box");
+        init: function() {
+          var self = this;
+          var box = self.dialog.querySelector(".box");
 
-          button.addEventListener('click', function(evt) {
-            var className = dialog.className;
-            removeClass(dialog,'hide');
-            addClass(dialog,'show');
-            setTimeout(function() {
-              removeClass(dialog,'deactive');
-              addClass(dialog,'active');
-            },0);
+          self.button.addEventListener('click', function() {
+            self.openDialog();
           });
 
           box.addEventListener('click', function(evt) {
@@ -106,40 +140,34 @@
             evt.preventDefault();
           });
 
-          box.addEventListener('transitionend', function() {
-            if (!dialog.className.match(/ active/)) {
-              removeClass(dialog, 'show');
-              addClass(dialog, 'hide');
-            }
+          self.dialog.addEventListener('click', function() {
+            self.closeDialog();
           });
 
-          dialog.addEventListener('click', function() {
-            var className = dialog.className;
-            removeClass(dialog, 'active');
-            addClass(dialog,'deactive');
+          document.querySelector('.dialog-close').addEventListener('click',function() {
+            self.closeDialog();
           });
+
         },
+        openDialog: function() {
+          var self = this;
+          var className = self.dialog.className;
+
+          util.removeClass(self.dialog,'deactive');
+          util.addClass(self.dialog,'active');
+
+        },
+        closeDialog: function() {
+          var self = this;
+          var className = self.dialog.className;
+          util.removeClass(self.dialog, 'active');
+          util.addClass(self.dialog,'deactive');
+        }
       }
       var dialog = new Dialog(
-          document.getElementById("dbutton"),
-          document.getElementById("dialog")
+        document.getElementById("dbutton"),
+        document.getElementById("dialog")
       );
-
-      function addClass(target, addClass) {
-        var className = target.className;
-        if (!new RegExp(addClass, 'g').exec(className)) {
-          className += " "+addClass;
-          target.className = className;
-        }
-      }
-      function removeClass(target, removeClass) {
-        var className = target.className;
-        if (new RegExp(removeClass, 'g').exec(className)) {
-          var regex = new RegExp(' '+removeClass, 'g');
-          className = className.replace(regex, '');
-          target.className = className;
-        }
-      }
 
     </script>
   </body>
