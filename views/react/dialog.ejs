@@ -5,111 +5,74 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 		<style>
 
-      .checkboxUi {
-        position: relative;
-        display: inline-block;
-        width: 150px;
-        height: 49px;
-      }
+      /************************************************************************
+       * TYPE2 STYLE                                                          *
+       ************************************************************************/
+      button.btn2 { display: inline-block; padding: 7px 12px; font-size: 14px; border: 0; background-color: #fff; outline: none; color: #000; box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; border-radius: 2px; }
 
-      .checkboxUi input[type=checkbox] {
-        opacity: 0;
-      }
+      button.btn2:hover { border-radius: 2px; background-color: rgba(0,0,0,0.07); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; }
+      button.btn2:active { box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px; }
 
+      button.btn2.btn2-primary { color: #fff; background-color: rgb(0, 188, 212); }
+      button.btn2.btn2-primary:hover { background-color: rgba(0, 188, 212, 0.4); }
 
-      .checkboxUi label {
+      /************************************************************************
+       * DIALGO STYLE                                                         *
+       ************************************************************************/
+      .dialog {
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: stretch;
+        border: 1px solid green;
+        background-color: rgba(0,0,0,0.5);
       }
 
-      .checkboxUi .checkWrap {
-
-        width: 28px;
-        height: 28px;
-        /* border: 0px solid red; */
-        margin-right: 7px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: stretch;
-        margin-top: 4px;
-        margin-right: 12px;
-      }
-
-      .checkboxUi .checkWrap .check {
-        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-        float: left;
+      .dialog .box {
         position: relative;
-        display: block;
-        flex-shrink: 0;
-        width: 36px;
-        margin-right: 0px;
-        margin-left: 0px;
-        padding: 4px 0px 6px 2px;
+        border: 1px solid green;
+        border-radius: 2px;
+        margin: auto;
+        width: 527px;
+        height: 250px;
+        background-color: #fff;
+        padding: 24px;
       }
 
-      .checkboxUi .checkWrap .check > div:first-child {
-        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-        width: 100%;
-        height: 14px;
-        border-radius: 30px;
-        background-color: #ccc;
+      .dialog .box .contents {
+        margin-top: 21px;
+        color: rgba(0, 0, 0, 0.6);
       }
 
-      .checkboxUi .checkWrap .check > div:last-child {
-
-        color: rgba(0, 0, 0, 0.870588);
-        background-color: rgb(245, 245, 245);
-        transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-        box-sizing: border-box;
-        font-family: Roboto, sans-serif;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-        border-radius: 50%;
+      .dialog .box .buttons {
         position: absolute;
-        top: 1px;
-        left: 20px;
-        width: 20px;
-        height: 20px;
-        line-height: 24px;
-        margin-left: -20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        padding: 19px;
       }
 
-
-      /**
-       * TYPE PRIMARY
-       */
-      .checkboxUi.primary input:checked ~ label .checkWrap .check > div:first-child {
-        background-color: rgba(0, 188, 212, 0.498039);
+      .dialog.deactive {
+        z-index: -1;
+        opacity: 0;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
-
-      .checkboxUi.primary input:checked ~ label .checkWrap .check > div:last-child {
-        background-color: rgb(0, 188, 212);
-        left: 100%;
+      .dialog.deactive .box {
+        opacity: 0;
+        margin-top: 0;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
-
-      /**
-       * TYPE SECONDARY
-       */
-      .checkboxUi.secondary input:checked ~ label .checkWrap .check > div:first-child {
-        background-color: rgb(255, 157, 157);
+      .dialog.active {
+        z-index: 99;
+        opacity: 1;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
-      .checkboxUi.secondary input:checked ~ label .checkWrap .check > div:last-child {
-        background-color: rgb(255, 204, 204);
-        left: 100%;
+      .dialog.active .box {
+        opacity: 1;
+        margin-top: 13%;
+        transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       }
 
 		</style>
@@ -118,36 +81,94 @@
     <% include ../base/header %> 
     <% include ../base/nav %> 
     <section class="main">
-      <h1>Toggle</h1>
+      <h1>Dialog</h1>
       <h3>- Primary Type</h3>
       <div>
-        <div class="checkboxUi primary">
-          <input type="checkbox" id="monkey1" name="monkey1" checked="checked"  />
-          <label for="monkey1">
-            <div class="checkWrap">
-              <div class="check">
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            monkeyToggle1
-          </label>
-        </div>
-        <br>
-        <div class="checkboxUi secondary">
-          <input type="checkbox" id="monkey2" name="monkey2" checked="checked"  />
-          <label for="monkey2">
-            <div class="checkWrap">
-              <div class="check">
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            monkeyToggle2
-          </label>
+        <button id="dbutton" type="button" class="btn2 btn2-primary">Dialog</button>
+      </div>
+      <div id="dialog" class="dialog deactive">
+        <div class="box">
+          <h2>Dialog title</h2>
+          <div class="contents">
+            The actions in this window were passed in as an array of React objects.
+          </div>
+          <div class="buttons">
+            <button type="button" class="btn2 dialog-close">Cancel</button>
+            <button type="button" class="btn2 btn2-primary">Submit</button>
+          </div>
         </div>
       </div>
     </section>
     <% include ../base/footer %> 
+    <script>
+
+      var util = { 
+        addClass: function (target, addClass) {
+          var className = target.className;
+          if (!new RegExp(addClass, 'g').exec(className)) {
+            className += " "+addClass;
+            target.className = className;
+          }
+        },
+        removeClass: function (target, removeClass) {
+          var className = target.className;
+          if (new RegExp(removeClass, 'g').exec(className)) {
+            var regex = new RegExp(' '+removeClass, 'g');
+            className = className.replace(regex, '');
+            target.className = className;
+          }
+        }
+      }
+
+      function Dialog(button, dialog) {
+        this.dialog = dialog;
+        this.button = button;
+        this.init();
+      }
+
+      Dialog.prototype = {
+        init: function() {
+          var self = this;
+          var box = self.dialog.querySelector(".box");
+
+          self.button.addEventListener('click', function() {
+            self.openDialog();
+          });
+
+          box.addEventListener('click', function(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+          });
+
+          self.dialog.addEventListener('click', function() {
+            self.closeDialog();
+          });
+
+          document.querySelector('.dialog-close').addEventListener('click',function() {
+            self.closeDialog();
+          });
+
+        },
+        openDialog: function() {
+          var self = this;
+          var className = self.dialog.className;
+
+          util.removeClass(self.dialog,'deactive');
+          util.addClass(self.dialog,'active');
+
+        },
+        closeDialog: function() {
+          var self = this;
+          var className = self.dialog.className;
+          util.removeClass(self.dialog, 'active');
+          util.addClass(self.dialog,'deactive');
+        }
+      }
+      var dialog = new Dialog(
+        document.getElementById("dbutton"),
+        document.getElementById("dialog")
+      );
+
+    </script>
   </body>
 </html>
