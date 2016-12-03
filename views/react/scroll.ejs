@@ -6,15 +6,36 @@
 		<style>
 
       .jwscroll-wrap {
+        position: relative;
         box-sizing: border-box;
         width: 70%;
-        border: 1px solid green;
+        overflow: hidden;
       }
       .jwscroll {
-        border: 1px solid red;
         height: 300px;
         overflow-y: scroll;
         overflow-x: hidden;
+      }
+
+      .jwscroll-wrap .sc {
+        position: absolute;
+        box-sizing: border-box;
+        border: 1px solid green;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 7px;
+      }
+      .jwscroll-wrap .ps {
+        position: absolute;
+        border: 1px solid red;
+        left: 0;
+        right: 0;
+      }
+
+      .jwscroll::-webkit-scrollbar {
+        width: 0;
+        height: 0;
       }
 		</style>
   </head>
@@ -26,44 +47,86 @@
       <h3>- Type A</h3>
       <div class="jwscroll-wrap">
         <div class="jwscroll">
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ccc;"></div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
           <div style="width: 100%;height: 30px;background-color: #fff;"></div>
         </div>
       </div>
     </section>
     <% include ../base/footer %> 
     <script>
-      var jwscrollWrap = document.querySelector(".jwscroll-wrap");
-      var jwscroll = document.querySelector(".jwscroll");
-      var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
-      console.log(scrollWeight, jwscrollWrap.offsetWidth);
 
-      var changeWidth = jwscrollWrap.offsetWidth - scrollWeight;
+      function hiddenScroll() {
+        var jwscrollWrap = document.querySelector(".jwscroll-wrap");
+        var jwscroll = document.querySelector(".jwscroll");
+        var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
+        var changeWidth = jwscroll.clientWidth - scrollWeight;
+        jwscroll.style.width = jwscroll.clientWidth+"px";
+        jwscrollWrap.style.width = changeWidth+"px";
+      }
 
-      jwscroll.style.width = jwscroll.clientWidth+"px";
-      jwscrollWrap.style.width = changeWidth+"px";
+      function addScroll() {
 
-      //jwscrollWrap.style.width= '100px';
+        var scrollWrap = document.querySelector(".jwscroll-wrap");
+        var node = document.createElement("div");
+        var ps = document.createElement("div");
+        ps.className = "ps";
+        node.className = "sc";
+
+        node.appendChild(ps);
+        scrollWrap.appendChild(node);
+      }
+
+      function makeScrollPosition() {
+        var jwscroll = document.querySelector(".jwscroll");
+        var ps = document.querySelector(".jwscroll-wrap .ps");
+        var scrollHeight = jwscroll.scrollHeight;
+        var clientHeight = jwscroll.clientHeight;
+        var posHeight = parseInt(clientHeight * (clientHeight/scrollHeight));
+        ps.style.height = posHeight+"px";
+      }
+
+      hiddenScroll();
+      addScroll();
+      makeScrollPosition();
+
+      document.querySelector(".jwscroll").addEventListener('scroll', function() {
+        var jwscroll = document.querySelector(".jwscroll");
+        var ps = document.querySelector(".jwscroll-wrap .ps");
+        var scrollHeight = jwscroll.scrollHeight;
+        var clientHeight = jwscroll.clientHeight;
+        var rating = clientHeight/scrollHeight;
+        var scrollTop = this.scrollTop * rating;
+
+        ps.style.top = scrollTop+"px";
+      });
+
+      window.addEventListener('resize',function() {
+        var jwscrollWrap = document.querySelector(".jwscroll-wrap");
+        var jwscroll = document.querySelector(".jwscroll");
+        jwscroll.removeAttribute("style");
+        jwscrollWrap.removeAttribute("style");
+        hiddenScroll();
+      });
 
     </script>
   </body>
