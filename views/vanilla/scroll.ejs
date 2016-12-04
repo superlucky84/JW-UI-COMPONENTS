@@ -27,19 +27,19 @@
       /************************************************************************
        * SCROLL STYLE                                                          *
        ************************************************************************/
-      .jwscroll-wrap {
+      .jwscroll {
         position: relative;
         box-sizing: border-box;
-        width: 70%;
+        width: 200px;
         overflow: hidden;
       }
-      .jwscroll {
-        height: 300px;
+      .jwscroll-inner {
+        height: 200px;
         overflow-y: scroll;
         overflow-x: hidden;
       }
 
-      .jwscroll-wrap .sc {
+      .jwscroll .sc {
         position: absolute;
         box-sizing: border-box;
         top: 0;
@@ -47,22 +47,23 @@
         right: 0;
         width: 7px;
       }
-      .jwscroll-wrap .ps {
+      .jwscroll .ps {
         position: absolute;
         border-radius: 5px;
         background-color: green;
         left: 0;
         right: 0;
         opacity: 0;
+        cursor: default;
         transition: opacity 800ms ease;
       }
 
-      .jwscroll-wrap .ps.show {
+      .jwscroll .ps.show {
         opacity: 1;
         transition: opacity 300ms ease;
       }
 
-      .jwscroll::-webkit-scrollbar {
+      .jwscroll-inner::-webkit-scrollbar {
         width: 0;
         height: 0;
       }
@@ -73,38 +74,76 @@
     <% include ../base/nav %> 
     <section class="main">
       <h1>Scroll</h1>
-      <h3>- Type A</h3>
-      <div class="jwscroll-wrap">
-        <div class="jwscroll">
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
-          <div style="width: 100%;height: 30px;background-color: #ebebeb;"></div>
-          <div style="width: 100%;height: 30px;background-color: #fff;"></div>
+      <h3>- Always visible scroll.</h3>
+      <div id="scrollTargetId" class="jwscroll">
+        <div class="jwscroll-inner">
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">a</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">b</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">c</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">d</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">e</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">f</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">g</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">h</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">i</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">j</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">k</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">l</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">m</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">n</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">o</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">p</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">q</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">r</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">s</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">t</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">u</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">v</div>
         </div>
       </div>
       <br>
       <button id="addContent" class="btn2">Add Content</button>
+
+      <h3>- Shameful scroll.</h3>
+      <div id="shyScrollTargetId" class="jwscroll">
+        <div class="jwscroll-inner">
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">a</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">b</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">c</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">d</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">e</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">f</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">g</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">h</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">i</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">j</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">k</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">l</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">m</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">n</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">o</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">p</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">q</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">r</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">s</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">t</div>
+          <div style="width: 100%;height: 30px;background-color: #ebebeb;">u</div>
+          <div style="width: 100%;height: 30px;background-color: #fff;">v</div>
+        </div>
+      </div>
     </section>
     <% include ../base/footer %> 
     <script>
+
+      document.getElementById("addContent").addEventListener('click', function() {
+        var jwscroll = document.querySelector(".jwscroll-inner");
+        var node1 = document.createElement("div");
+        var node2= document.createElement("div");
+        node1.setAttribute('style', "width: 100%;height: 30px;background-color: #ebebeb;");
+        node2.setAttribute('style', "width: 100%;height: 30px;background-color: #fff;");
+        jwscroll.appendChild(node1);
+        jwscroll.appendChild(node2);
+      });
 
       var util = { 
         addClass: function (target, addClass) {
@@ -125,85 +164,131 @@
       }
 
 
-      function hiddenScroll() {
-        var jwscrollWrap = document.querySelector(".jwscroll-wrap");
-        var jwscroll = document.querySelector(".jwscroll");
-        var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
-        var changeWidth = jwscroll.clientWidth - scrollWeight;
-        jwscroll.style.width = jwscroll.clientWidth+"px";
-        jwscrollWrap.style.width = changeWidth+"px";
+
+      /**
+       * CLASS 구현체
+       */
+      function JwScroll(scrollWrap, option) {
+        this.scrollWrap = scrollWrap;
+        this.scrollInner = scrollWrap.querySelector(".jwscroll-inner");
+        this.ps = null;
+        this.sc = null;
+        this.rating = 0;
+        this.op = (option)?option:{};
+        this.scrollDragStandard = [];
+        this.drag = false;
+
+        this.scrollTime = null;
+        this.hiddenScroll();
+        this.addScroll();
+        this.makeScrollPosition();
+        this.setScrollTop();
+        this.initEvent();
       }
 
-      function addScroll() {
+      JwScroll.prototype = {
+        hiddenScroll: function () {
+          var jwscrollWrap = this.scrollWrap;
+          var jwscroll = this.scrollInner;
+          var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
+          var changeWidth = jwscroll.clientWidth - scrollWeight;
+          jwscroll.style.width = jwscroll.clientWidth+"px";
+          jwscrollWrap.style.width = changeWidth+"px";
+        },
+        addScroll: function () {
+          var jwscrollWrap = this.scrollWrap;
+          this.sc = document.createElement("div");
+          this.ps = document.createElement("div");
+          this.ps.className = "ps";
+          this.sc.className = "sc";
 
-        var scrollWrap = document.querySelector(".jwscroll-wrap");
-        var node = document.createElement("div");
-        var ps = document.createElement("div");
-        ps.className = "ps";
-        node.className = "sc";
-
-        node.appendChild(ps);
-        scrollWrap.appendChild(node);
+          this.sc.appendChild(this.ps);
+          jwscrollWrap.appendChild(this.sc);
+        },
+        makeScrollPosition: function () {
+          var jwscroll = this.scrollInner;
+          var ps = this.ps;
+          var scrollHeight = jwscroll.scrollHeight;
+          var clientHeight = jwscroll.clientHeight;
+          var posHeight = parseInt(clientHeight * (clientHeight/scrollHeight));
+          ps.style.height = posHeight+"px";
+          if (this.op.scrollShowAlways === true) ps.style.opacity = 1;
+        },
+        setScrollTop: function () {
+          var jwscroll = this.scrollInner;
+          var ps = this.ps;
+          var scrollHeight = jwscroll.scrollHeight;
+          var clientHeight = jwscroll.clientHeight;
+          this.rating = clientHeight/scrollHeight;
+          var scrollTop = jwscroll.scrollTop * this.rating;
+          ps.style.top = scrollTop+"px";
+        },
+        scrollShy: function () {
+          var ps = this.ps;
+          util.addClass(ps, 'show');
+          clearTimeout(this.scrollTime);
+          this.scrollTime = setTimeout(function() {
+            util.removeClass(ps, 'show');
+          },1000);
+        },
+        initEvent: function () {
+          var self = this;
+          document.addEventListener('mousemove', function(evt) {
+            if (self.drag) {
+              var changePx = evt.screenY - self.scrollDragStandard[0];
+              var changeTop = changePx / self.rating;
+              var scrollTop = self.scrollDragStandard[1] + changeTop;
+              self.scrollInner.scrollTop = scrollTop;
+            }
+          });
+          self.ps.addEventListener('mousedown', function(evt) {
+            self.scrollDragStandard[0] = evt.screenY;
+            self.scrollDragStandard[1] = self.scrollInner.scrollTop;
+            self.drag = true;
+          });
+          self.ps.addEventListener('mouseup', function() {
+            self.drag = false;
+          });
+          document.addEventListener('mouseup', function() {
+            self.drag = false;
+          });
+          self.scrollInner.addEventListener('mouseenter', function() {
+            self.scrollShy();
+          });
+          self.sc.addEventListener('mouseenter', function() {
+            util.addClass(self.ps, 'show');
+          });
+          self.sc.addEventListener('mouseleave', function() {
+            util.removeClass(self.ps, 'show');
+          });
+          self.scrollInner.addEventListener('scroll', function() {
+            self.setScrollTop();
+            self.scrollShy();
+          });
+          self.scrollInner.addEventListener('DOMSubtreeModified', function() {
+            self.makeScrollPosition();
+            self.setScrollTop();
+          });
+          window.addEventListener('resize',function() {
+            var jwscrollWrap = self.scrollWrap;
+            var jwscroll = self.scrollInner;
+            jwscroll.removeAttribute("style");
+            jwscrollWrap.removeAttribute("style");
+            self.hiddenScroll();
+          });
+        }
       }
 
-      function makeScrollPosition() {
-        var jwscroll = document.querySelector(".jwscroll");
-        var ps = document.querySelector(".jwscroll-wrap .ps");
-        var scrollHeight = jwscroll.scrollHeight;
-        var clientHeight = jwscroll.clientHeight;
-        var posHeight = parseInt(clientHeight * (clientHeight/scrollHeight));
-        ps.style.height = posHeight+"px";
-      }
-      function setScrollTop() {
-        var jwscroll = document.querySelector(".jwscroll");
-        var ps = document.querySelector(".jwscroll-wrap .ps");
-        var scrollHeight = jwscroll.scrollHeight;
-        var clientHeight = jwscroll.clientHeight;
-        var rating = clientHeight/scrollHeight;
-        var scrollTop = jwscroll.scrollTop * rating;
-        ps.style.top = scrollTop+"px";
-      }
-
-      hiddenScroll();
-      addScroll();
-      makeScrollPosition();
-
-
-      var scrollTime = null;
-      document.querySelector(".jwscroll").addEventListener('scroll', function() {
-
-        setScrollTop();
-
-        var ps = document.querySelector(".jwscroll-wrap .ps");
-        util.addClass(ps, 'show');
-        clearTimeout(scrollTime);
-        scrollTime = setTimeout(function() {
-          util.removeClass(ps, 'show');
-        },1000);
-      });
-      document.querySelector(".jwscroll").addEventListener('DOMSubtreeModified', function() {
-        makeScrollPosition();
-        setScrollTop();
+      var JwScrollIns = new JwScroll(document.getElementById("scrollTargetId"),{
+        scrollShowAlways: true
       });
 
-      window.addEventListener('resize',function() {
-        var jwscrollWrap = document.querySelector(".jwscroll-wrap");
-        var jwscroll = document.querySelector(".jwscroll");
-        jwscroll.removeAttribute("style");
-        jwscrollWrap.removeAttribute("style");
-        hiddenScroll();
+      var JwScrollIns2 = new JwScroll(document.getElementById("shyScrollTargetId"),{
+        scrollShowAlways: false
       });
 
 
-      document.getElementById("addContent").addEventListener('click', function() {
-        var jwscroll = document.querySelector(".jwscroll");
-        var node1 = document.createElement("div");
-        var node2= document.createElement("div");
-        node1.setAttribute('style', "width: 100%;height: 30px;background-color: #ebebeb;");
-        node2.setAttribute('style', "width: 100%;height: 30px;background-color: #fff;");
-        jwscroll.appendChild(node1);
-        jwscroll.appendChild(node2);
-      });
+
 
     </script>
   </body>

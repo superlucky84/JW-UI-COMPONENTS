@@ -499,7 +499,7 @@ section.main {
   /*display: inline-block;*/
   float: left;
   width: calc( 100% - 200px );
-  height: calc(100% - 47px);
+  height: calc( 100% + 300px );
   border-left: 1px solid #ccc;
   padding: 30px;
   background-color: #fff;
