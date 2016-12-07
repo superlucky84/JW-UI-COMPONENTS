@@ -21478,7 +21478,7 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21498,17 +21498,26 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Dday = function (_Component) {
-	  _inherits(Dday, _Component);
+	var Scroll = function (_Component) {
+	  _inherits(Scroll, _Component);
 
-	  function Dday(props) {
-	    _classCallCheck(this, Dday);
+	  function Scroll(props) {
+	    _classCallCheck(this, Scroll);
 
-	    return _possibleConstructorReturn(this, (Dday.__proto__ || Object.getPrototypeOf(Dday)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).call(this, props));
+
+	    if (!document.querySelector("style[jui-scroll]")) {
+	      var head = document.querySelector("head");
+	      var style = document.createElement('style');
+	      style.setAttribute('jui-scroll', '');
+	      head.appendChild(style);
+	    }
+
+	    return _this;
 	  }
 
-	  _createClass(Dday, [{
-	    key: 'render',
+	  _createClass(Scroll, [{
+	    key: "render",
 	    value: function render() {
 
 	      var jwscroll = {
@@ -21521,8 +21530,7 @@
 	      var jwscrollInner = {
 	        'height': '200px',
 	        'overflowY': 'scroll',
-	        'overflowX': 'hidden',
-	        'WebkitScrollbar': 'width:0; height: 0;'
+	        'overflowX': 'hidden'
 	      };
 
 	      var jwscrollSc = {
@@ -21557,17 +21565,17 @@
 	      */
 
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        { style: jwscroll },
-	        _react2.default.createElement('div', { style: jwscrollInner })
+	        _react2.default.createElement("div", { style: jwscrollInner })
 	      );
 	    }
 	  }]);
 
-	  return Dday;
+	  return Scroll;
 	}(_react.Component);
 
-	exports.default = Dday;
+	exports.default = Scroll;
 
 /***/ }
 /******/ ]);

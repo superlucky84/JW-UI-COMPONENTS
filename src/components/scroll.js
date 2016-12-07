@@ -1,10 +1,21 @@
 import  React,{Component} from 'react';
 
 
-export default class Dday extends Component {
+export default class Scroll extends Component {
 
   constructor(props) {
     super(props);
+
+
+
+    if (!document.querySelector("style[jui-scroll]")) {
+      let head = document.querySelector("head");
+      let style = document.createElement('style');
+      style.setAttribute('jui-scroll','');
+      head.appendChild(style);
+    }
+
+
   }
 
   render() {
@@ -20,7 +31,6 @@ export default class Dday extends Component {
       'height': '200px',
       'overflowY': 'scroll',
       'overflowX': 'hidden',
-      'WebkitScrollbar': 'width:0; height: 0;'
     }
 
     const jwscrollSc = {
@@ -45,7 +55,7 @@ export default class Dday extends Component {
     const jwscrollPsShow = {
       'opacity': 1,
       'transition': 'opacity 300ms ease'
-    }
+    };
 
     /*
     jwscrollInner::-webkit-scrollbar {
