@@ -63,8 +63,234 @@
 	_reactDom2.default.render(_react2.default.createElement(
 	  'div',
 	  null,
-	  _react2.default.createElement(_scroll2.default, null),
-	  _react2.default.createElement(_scroll2.default, null)
+	  _react2.default.createElement(
+	    _scroll2.default,
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'b'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'b'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'c'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'c'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'd'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'd'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'e'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'e'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    )
+	  ),
+	  _react2.default.createElement(
+	    _scroll2.default,
+	    { width: '200px' },
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'b'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'b'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'c'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'c'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'd'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'd'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'e'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'e'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
+	      'a'
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
+	      'a'
+	    )
+	  )
 	), document.getElementById('scroll'));
 
 /***/ },
@@ -21478,7 +21704,7 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21489,6 +21715,10 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _Util = __webpack_require__(179);
+
+	var _Util2 = _interopRequireDefault(_Util);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21506,68 +21736,180 @@
 
 	    var _this = _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).call(this, props));
 
-	    if (!document.querySelector("style[jui-scroll]")) {
-	      var head = document.querySelector("head");
-	      var style = document.createElement('style');
-	      style.setAttribute('jui-scroll', '');
-	      head.appendChild(style);
-	    }
+	    _this.scrollWrap = null;
+	    _this.scrollInner = null;
+	    _this.ps = null;
+	    _this.sc = null;
+	    _this.rating = 0;
+	    _this.op = _this.props.option ? _this.props.option : {};
+
+	    _this.scrollDragStandard = [];
+	    _this.drag = false;
+	    _this.scrollTime = null;
+	    _this.util = new _Util2.default();
+
+	    _this.isWebkit = 'WebkitAppearance' in document.documentElement.style;
 
 	    return _this;
 	  }
 
 	  _createClass(Scroll, [{
-	    key: "render",
-	    value: function render() {
-
-	      var jwscroll = {
-	        'position': 'relative',
-	        'boxSizing': 'border-box',
-	        'width': '200px',
-	        'overflow': 'hidden'
-	      };
-
-	      var jwscrollInner = {
-	        'height': '200px',
-	        'overflowY': 'scroll',
-	        'overflowX': 'hidden'
-	      };
-
-	      var jwscrollSc = {
-	        'position': 'absolute',
-	        'boxSizing': 'border-box',
-	        'top': '0',
-	        'bottom': '0',
-	        'right': '0',
-	        'width': '7px'
-	      };
-	      var jwscrollPs = {
-	        'position': 'absolute',
-	        'borderRadius': '5px',
-	        'backgroundColor': 'green',
-	        'left': '0',
-	        'right': '0',
-	        'opacity': '0',
-	        'cursor': 'default',
-	        'transition': 'opacity 800ms ease'
-	      };
-
-	      var jwscrollPsShow = {
-	        'opacity': 1,
-	        'transition': 'opacity 300ms ease'
-	      };
-
-	      /*
-	      jwscrollInner::-webkit-scrollbar {
-	        width: 0;
-	        height: 0;
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {}
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      if (this.isWebkit !== true) {
+	        this.hiddenScroll();
 	      }
-	      */
+	      this.addScroll();
+	      this.makeScrollPosition();
+	      this.setScrollTop();
+	      this.initEvent();
+	    }
+	  }, {
+	    key: 'hiddenScroll',
+	    value: function hiddenScroll() {
+	      var jwscrollWrap = this.scrollWrap;
+	      var jwscroll = this.scrollInner;
+	      var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
+	      var changeWidth = jwscroll.clientWidth - scrollWeight;
+	      jwscroll.style.width = jwscroll.clientWidth + "px";
+	      jwscrollWrap.style.width = changeWidth + "px";
+	    }
+	  }, {
+	    key: 'addScroll',
+	    value: function addScroll() {
+	      var jwscrollWrap = this.scrollWrap;
+	      this.sc = document.createElement("div");
+	      this.ps = document.createElement("div");
+	      this.ps.className = "ps";
+	      this.sc.className = "sc";
+
+	      this.sc.appendChild(this.ps);
+	      jwscrollWrap.appendChild(this.sc);
+	    }
+	  }, {
+	    key: 'makeScrollPosition',
+	    value: function makeScrollPosition() {
+	      var jwscroll = this.scrollInner;
+	      var ps = this.ps;
+	      var scrollHeight = jwscroll.scrollHeight;
+	      var clientHeight = jwscroll.clientHeight;
+	      var posHeight = parseInt(clientHeight * (clientHeight / scrollHeight));
+	      ps.style.height = posHeight + "px";
+	      if (this.op.scrollShowAlways === true) ps.style.opacity = 1;
+	    }
+	  }, {
+	    key: 'setScrollTop',
+	    value: function setScrollTop() {
+	      var jwscroll = this.scrollInner;
+	      var ps = this.ps;
+	      var scrollHeight = jwscroll.scrollHeight;
+	      var clientHeight = jwscroll.clientHeight;
+	      this.rating = clientHeight / scrollHeight;
+	      var scrollTop = jwscroll.scrollTop * this.rating;
+	      ps.style.top = scrollTop + "px";
+	    }
+	  }, {
+	    key: 'scrollShy',
+	    value: function scrollShy() {
+	      var self = this;
+	      var ps = this.ps;
+	      self.util.addClass(ps, 'show');
+	      clearTimeout(this.scrollTime);
+	      self.scrollTime = setTimeout(function () {
+	        self.util.removeClass(ps, 'show');
+	      }, 1000);
+	    }
+	  }, {
+	    key: 'initEvent',
+	    value: function initEvent() {
+
+	      var self = this;
+
+	      document.addEventListener('mousemove', function (evt) {
+	        if (self.drag) {
+	          var changePx = evt.screenY - self.scrollDragStandard[0];
+	          var changeTop = changePx / self.rating;
+	          var scrollTop = self.scrollDragStandard[1] + changeTop;
+	          self.scrollInner.scrollTop = scrollTop;
+	        }
+	      });
+	      self.ps.addEventListener('mousedown', function (evt) {
+	        self.scrollDragStandard[0] = evt.screenY;
+	        self.scrollDragStandard[1] = self.scrollInner.scrollTop;
+	        self.drag = true;
+	      });
+	      self.ps.addEventListener('mouseup', function () {
+	        self.drag = false;
+	      });
+	      document.addEventListener('mouseup', function () {
+	        self.drag = false;
+	      });
+	      self.scrollInner.addEventListener('mouseenter', function () {
+	        self.scrollShy();
+	      });
+	      self.sc.addEventListener('mouseenter', function () {
+	        self.util.addClass(self.ps, 'show');
+	      });
+	      self.sc.addEventListener('mouseleave', function () {
+	        self.util.removeClass(self.ps, 'show');
+	      });
+	      self.scrollInner.addEventListener('scroll', function () {
+	        self.setScrollTop();
+	        self.scrollShy();
+	      });
+	      self.scrollInner.addEventListener('DOMSubtreeModified', function () {
+	        self.makeScrollPosition();
+	        self.setScrollTop();
+	      });
+
+	      if (self.isWebkit !== true) {
+	        window.addEventListener('resize', function () {
+	          var jwscrollWrap = self.scrollWrap;
+	          var jwscroll = self.scrollInner;
+	          jwscroll.removeAttribute("style");
+	          jwscrollWrap.removeAttribute("style");
+
+	          if (self.props.width) {
+	            jwscrollWrap.style.width = self.props.width;
+	          }
+
+	          self.hiddenScroll();
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var style = {};
+
+	      if (this.props.width) {
+	        style.width = this.props.width;
+	      }
 
 	      return _react2.default.createElement(
-	        "div",
-	        { style: jwscroll },
-	        _react2.default.createElement("div", { style: jwscrollInner })
+	        'div',
+	        {
+	          className: 'jwscroll',
+	          style: style,
+	          ref: function ref(scrollWrap) {
+	            return _this2.scrollWrap = scrollWrap;
+	          }
+	        },
+	        _react2.default.createElement(
+	          'div',
+	          {
+	            className: 'jwscroll-inner',
+	            ref: function ref(scrollInner) {
+	              return _this2.scrollInner = scrollInner;
+	            }
+	          },
+	          this.props.children
+	        )
 	      );
 	    }
 	  }]);
@@ -21576,6 +21918,51 @@
 	}(_react.Component);
 
 	exports.default = Scroll;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Util = function () {
+	  function Util() {
+	    _classCallCheck(this, Util);
+	  }
+
+	  _createClass(Util, [{
+	    key: 'addClass',
+	    value: function addClass(target, _addClass) {
+	      var className = target.className;
+	      if (!new RegExp(_addClass, 'g').exec(className)) {
+	        className += " " + _addClass;
+	        target.className = className;
+	      }
+	    }
+	  }, {
+	    key: 'removeClass',
+	    value: function removeClass(target, _removeClass) {
+	      var className = target.className;
+	      if (new RegExp(_removeClass, 'g').exec(className)) {
+	        var regex = new RegExp(' ' + _removeClass, 'g');
+	        className = className.replace(regex, '');
+	        target.className = className;
+	      }
+	    }
+	  }]);
+
+	  return Util;
+	}();
+
+	exports.default = Util;
 
 /***/ }
 /******/ ]);
