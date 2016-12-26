@@ -25,19 +25,32 @@
         right: 0;
         top: 0;
         bottom: 0;
-        border: 1px solid green;
         background-color: rgba(0,0,0,0.5);
+
+        margin: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
       }
 
       .dialog .box {
         position: relative;
         border: 1px solid green;
         border-radius: 2px;
-        margin: auto;
+        /*margin: auto;*/
         width: 527px;
         height: 189px;
         background-color: #fff;
         padding: 24px;
+        top: -20%;
       }
 
       .dialog .box .contents {
