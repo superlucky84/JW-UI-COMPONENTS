@@ -64,232 +64,72 @@
 	  'div',
 	  null,
 	  _react2.default.createElement(
-	    _scroll2.default,
+	    'h1',
 	    null,
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'b'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'b'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'c'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'c'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'd'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'd'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'e'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'e'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    )
+	    'Scroll'
+	  ),
+	  _react2.default.createElement(
+	    'h3',
+	    null,
+	    '- Always visible scroll.'
 	  ),
 	  _react2.default.createElement(
 	    _scroll2.default,
-	    { width: '200px' },
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'b'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'b'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'c'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'c'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'd'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'd'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'e'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'e'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } },
-	      'a'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } },
-	      'a'
-	    )
+	    {
+	      option: { scrollShowAlways: true }
+	    },
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } })
+	  ),
+	  _react2.default.createElement('br', null),
+	  _react2.default.createElement(
+	    'h3',
+	    null,
+	    '- Shameful scroll.'
+	  ),
+	  _react2.default.createElement(
+	    _scroll2.default,
+	    {
+	      option: { scrollShowAlways: false }
+	    },
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#ebebeb' } }),
+	    _react2.default.createElement('div', { style: { 'width': '100%', 'height': '30px', 'backgroundColor': '#fff' } })
 	  )
 	), document.getElementById('scroll'));
 
@@ -21716,6 +21556,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
 	var _Util = __webpack_require__(179);
 
 	var _Util2 = _interopRequireDefault(_Util);
@@ -21759,6 +21603,10 @@
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+
+	      this.scrollWrap = _reactDom2.default.findDOMNode(this);
+	      this.scrollInner = this.scrollWrap.querySelector('.jwscroll-inner');
+
 	      if (this.isWebkit !== true) {
 	        this.hiddenScroll();
 	      }
@@ -21768,14 +21616,43 @@
 	      this.initEvent();
 	    }
 	  }, {
+	    key: 'componentDidReceiveProps',
+	    value: function componentDidReceiveProps(nextprops) {
+
+	      console.log(nextprops.realleft, this.props.realleft);
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps(nextprops) {
+
+	      if (nextprops.realleft != this.props.realleft && this.isWebkit !== true) {
+
+	        var jwscrollWrap = this.scrollWrap;
+	        var jwscroll = this.scrollInner;
+	        jwscroll.removeAttribute("style");
+	        jwscrollWrap.removeAttribute("style");
+	        this.hiddenScroll();
+	      }
+
+	      if (!this.props.viewType || this.props.viewType != 'preview') {
+	        return;
+	      }
+	      if (nextprops.previewScroll != this.props.previewScroll || nextprops.previewScroll == 100) {
+	        var $this = _reactDom2.default.findDOMNode(this).querySelector('.jwscroll-inner');
+	        var result = ($this.scrollHeight - $this.clientHeight) * nextprops.previewScroll / 100;
+	        $this.scrollTop = Number(result);
+	      }
+	    }
+	  }, {
 	    key: 'hiddenScroll',
 	    value: function hiddenScroll() {
 	      var jwscrollWrap = this.scrollWrap;
 	      var jwscroll = this.scrollInner;
-	      var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
-	      var changeWidth = jwscroll.clientWidth - scrollWeight;
-	      jwscroll.style.width = jwscroll.clientWidth + "px";
-	      jwscrollWrap.style.width = changeWidth + "px";
+
+	      var scrollWidth = jwscroll.offsetWidth - jwscroll.clientWidth;
+	      var innerWidth = jwscrollWrap.offsetWidth + scrollWidth;
+	      jwscroll.style.width = innerWidth + "px";
+	      jwscrollWrap.style.width = innerWidth - scrollWidth + "px";
 	    }
 	  }, {
 	    key: 'addScroll',
@@ -21792,7 +21669,7 @@
 	  }, {
 	    key: 'makeScrollPosition',
 	    value: function makeScrollPosition() {
-	      var jwscroll = this.scrollInner;
+	      var jwscroll = _reactDom2.default.findDOMNode(this.scrollInner);
 	      var ps = this.ps;
 	      var scrollHeight = jwscroll.scrollHeight;
 	      var clientHeight = jwscroll.clientHeight;
@@ -21848,7 +21725,9 @@
 	        self.drag = false;
 	      });
 	      self.scrollInner.addEventListener('mouseenter', function () {
-	        self.scrollShy();
+	        if (self.scrollInner.scrollHeight != self.scrollInner.clientHeight) {
+	          self.scrollShy();
+	        }
 	      });
 	      self.sc.addEventListener('mouseenter', function () {
 	        self.util.addClass(self.ps, 'show');
@@ -21861,53 +21740,36 @@
 	        self.scrollShy();
 	      });
 	      self.scrollInner.addEventListener('DOMSubtreeModified', function () {
-	        self.makeScrollPosition();
-	        self.setScrollTop();
+	        setTimeout(function () {
+	          self.makeScrollPosition();
+	          self.setScrollTop();
+	        }, 30);
 	      });
 
-	      if (self.isWebkit !== true) {
-	        window.addEventListener('resize', function () {
+	      window.addEventListener('resize', function () {
+
+	        if (self.isWebkit !== true) {
 	          var jwscrollWrap = self.scrollWrap;
 	          var jwscroll = self.scrollInner;
 	          jwscroll.removeAttribute("style");
 	          jwscrollWrap.removeAttribute("style");
 
-	          if (self.props.width) {
-	            jwscrollWrap.style.width = self.props.width;
-	          }
-
 	          self.hiddenScroll();
-	        });
-	      }
+	        }
+	        self.makeScrollPosition();
+	        self.setScrollTop();
+	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
-
-	      var style = {};
-
-	      if (this.props.width) {
-	        style.width = this.props.width;
-	      }
 
 	      return _react2.default.createElement(
 	        'div',
-	        {
-	          className: 'jwscroll',
-	          style: style,
-	          ref: function ref(scrollWrap) {
-	            return _this2.scrollWrap = scrollWrap;
-	          }
-	        },
+	        { className: 'jwscroll' },
 	        _react2.default.createElement(
 	          'div',
-	          {
-	            className: 'jwscroll-inner',
-	            ref: function ref(scrollInner) {
-	              return _this2.scrollInner = scrollInner;
-	            }
-	          },
+	          { className: 'jwscroll-inner' },
 	          this.props.children
 	        )
 	      );

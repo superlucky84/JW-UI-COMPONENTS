@@ -25,6 +25,7 @@ html {
 body {
   margin: 0;
   background-color: #fdf5e6;
+  overflow: hidden;
 }
 
 /**
@@ -488,30 +489,42 @@ footer {
 }
 
 nav {
+  position: absolute;
   /*display: inline-block;*/
-  float: left;
   width: 200px;
-  height: calc(100% - 47px);
   background-color: #fff;
+  overflow-y: auto;
+  overflow-x: none;
+
+  border-right: 1px solid #ccc;
+
+  bottom: 47px;
+  top: 47px;
+  right:  200px;
+  left: 0;
 }
 
 section.main {
-  /*display: inline-block;*/
+  /* display: inline-block; */
   float: left;
   width: calc( 100% - 200px );
-  height: calc( 100% + 300px );
-  border-left: 1px solid #ccc;
   padding: 30px;
   background-color: #fff;
+  position: absolute;
+  left: 200px;
+  bottom: 47px;
+  top: 47px;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: none;
 }
 
 footer {
   position: fixed;
   clear: both;
-  bottom: 0px;
-  right: 0px;
   left: 0;
   right: 0;
+  bottom: 0;
 }
 
 html, body {

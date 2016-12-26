@@ -1,4 +1,5 @@
 import  React,{Component} from 'react';
+import ReactDOM from 'react-dom'
 import Util from '../lib/Util';
 
 
@@ -28,6 +29,10 @@ export default class Scroll extends Component {
   }
 
   componentDidMount() {
+
+    this.scrollWrap = ReactDOM.findDOMNode(this);
+    this.scrollInner = this.scrollWrap.querySelector('.jwscroll-inner');
+
     if (this.isWebkit !== true) {
       this.hiddenScroll();
     }
@@ -37,13 +42,42 @@ export default class Scroll extends Component {
     this.initEvent();
   }
 
+  componentDidReceiveProps(nextprops) {
+
+    console.log(nextprops.realleft , this.props.realleft);
+
+  }
+
+  componentWillReceiveProps(nextprops) {
+
+    if (nextprops.realleft != this.props.realleft && this.isWebkit !== true) {
+
+      var jwscrollWrap = this.scrollWrap;
+      var jwscroll = this.scrollInner;
+      jwscroll.removeAttribute("style");
+      jwscrollWrap.removeAttribute("style");
+      this.hiddenScroll();
+    }
+
+    if (!this.props.viewType || this.props.viewType!='preview' ) {
+      return;
+    }
+    if (nextprops.previewScroll != this.props.previewScroll || nextprops.previewScroll==100 ) {
+      let $this = ReactDOM.findDOMNode(this).querySelector('.jwscroll-inner');
+      let result = (($this.scrollHeight - $this.clientHeight) * nextprops.previewScroll) / 100;
+      $this.scrollTop = Number(result);
+    }
+  }
+
+
   hiddenScroll() {
     var jwscrollWrap = this.scrollWrap;
     var jwscroll = this.scrollInner;
-    var scrollWeight = jwscroll.offsetWidth - jwscroll.clientWidth;
-    var changeWidth = jwscroll.clientWidth - scrollWeight;
-    jwscroll.style.width = jwscroll.clientWidth+"px";
-    jwscrollWrap.style.width = changeWidth+"px";
+
+    var scrollWidth = jwscroll.offsetWidth - jwscroll.clientWidth;
+    var innerWidth = (jwscrollWrap.offsetWidth+scrollWidth);
+    jwscroll.style.width = innerWidth+"px";
+    jwscrollWrap.style.width = (innerWidth-scrollWidth)+"px";
   }
 
   addScroll() {
@@ -59,7 +93,7 @@ export default class Scroll extends Component {
 
 
   makeScrollPosition() {
-    var jwscroll = this.scrollInner;
+    var jwscroll = ReactDOM.findDOMNode(this.scrollInner);
     var ps = this.ps;
     var scrollHeight = jwscroll.scrollHeight;
     var clientHeight = jwscroll.clientHeight;
@@ -112,7 +146,9 @@ export default class Scroll extends Component {
       self.drag = false;
     });
     self.scrollInner.addEventListener('mouseenter', function() {
-      self.scrollShy();
+      if (self.scrollInner.scrollHeight != self.scrollInner.clientHeight) {
+        self.scrollShy();
+      }
     });
     self.sc.addEventListener('mouseenter', function() {
       self.util.addClass(self.ps, 'show');
@@ -125,46 +161,33 @@ export default class Scroll extends Component {
       self.scrollShy();
     });
     self.scrollInner.addEventListener('DOMSubtreeModified', function() {
-      self.makeScrollPosition();
-      self.setScrollTop();
+      setTimeout(() => {
+        self.makeScrollPosition();
+        self.setScrollTop();
+      },30);
     });
 
-    if (self.isWebkit !== true) {
-      window.addEventListener('resize',function() {
+
+    window.addEventListener('resize',function() {
+
+      if (self.isWebkit !== true) {
         var jwscrollWrap = self.scrollWrap;
         var jwscroll = self.scrollInner;
         jwscroll.removeAttribute("style");
         jwscrollWrap.removeAttribute("style");
 
-
-        if (self.props.width) {
-          jwscrollWrap.style.width = self.props.width;
-        }
-
         self.hiddenScroll();
-      });
-    }
+      }
+      self.makeScrollPosition();
+      self.setScrollTop();
+    });
   }
-
 
   render() {
 
-    const style = {};
-
-    if (this.props.width) {
-      style.width = this.props.width;
-    }
-
     return (
-      <div 
-        className='jwscroll' 
-        style={style}
-        ref={(scrollWrap) => this.scrollWrap = scrollWrap}
-      >
-        <div 
-          className='jwscroll-inner'
-          ref={(scrollInner) => this.scrollInner = scrollInner}
-        >
+      <div className='jwscroll'>
+        <div className='jwscroll-inner'>
           {this.props.children}
         </div>
       </div>
